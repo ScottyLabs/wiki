@@ -4,24 +4,32 @@ title: Mapping
 
 # Mapping
 
-## Prerequisites
+## Basics
 
-Before you start mapping, please read the following articles/guides:
-- [Mapping with JOSM](https://labs.mapbox.com/mapping/mapping-with-josm/)
-- [Simple Indoor Tagging](https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging)
-- [Pedestrian navigation - Ways](https://wiki.openstreetmap.org/wiki/Guidelines_for_pedestrian_navigation#Ways_inside_buildings)
-- [Pedestrian navigation - Areas](https://wiki.openstreetmap.org/wiki/Guidelines_for_pedestrian_navigation#Inside_buildings)
+Please read the following sections from this [guide](https://labs.mapbox.com/mapping/mapping-with-josm/#creating-data):
+- Creating data
+- Modifying data
+- Tagging
 
-:::tip
+:::note
 
-Don't worry about understanding everything, just become familiar with the terminology and concepts used for mapping.
+For our purposes, we are almost always going to use closed ways.
 
 :::
 
-## Downloading Floor Plans
+[Keyboard shortcuts](https://josm.openstreetmap.de/wiki/Shortcuts) are going to speed up your mapping significantly. Here are some you should know:
 
-1. Make sure you've cloned the map data [repo](./getting-started#map-data) to your local machine.
-2. Create a new branch called `andrew_id/building-floor`
+| Shortcut | Action |
+| :-: | :- |
+| `A` | Standard draw mode, press again for angle snapping |
+| `S` | Select tool |
+| `Q` | Orthogonalize angles |
+
+## Indoor Mapping Guidelines
+
+Make sure you've cloned the map data [repo](./getting-started#map-data) to your local machine.
+
+Create a new branch called `andrew_id/building-floor`
    - For example, if I were mapping Gates 5, my branch would be `jlyao/ghc-5`
 
 :::note
@@ -30,38 +38,72 @@ We are using building abbreviations for everything, you can find a list [here](h
 
 :::
 
-3. Go to this [link](https://www.cmu.edu/finance/property-space/floorplan-room/) and navigate to the building you wish to map.
-4. Download the `.pdf` file for the desired floor under the `Shown by Room Number` list.
-   - Make sure to save the floor plan in the correct directory under `buildings`. If one does not exist, create a new directory for the building using its abbreviated name.
-   - Continuing the previous example, I would navigate to this [page](https://www.cmu.edu/finance/property-space/floorplan-room/acad-admin/GHC/index.html) and download `Floor 5 [.pdf]` from the leftmost list.
-5. Convert the `.pdf` floor plan into a `.png` image. You can use an [online converter](https://cloudconvert.com/pdf-to-png) or any local application that you are familiar with. Save the `.png` image in the same folder as before.
-   - Make sure to use at least 300 DPI when converting so the resulting image is still sharp when zoomed in.
+### Set up floor plan
 
-## Orienting the Floor Plan
+If you are starting a new floor, please ask Preethi or Jason to set up the floor plan file. If you wish to do it yourself, see the floor plans [page](./floor-plans) (***CURRENTLY INCOMPLETE***).
 
-:::note
-
-This section will differ depending on whether or not the building you are currently mapping already has a floor mapped.
-Please follow the instructions from the correct section:
-
-- [Building has a floor mapped](#floor-exists)
-- [No floors have been mapped](#no-floor-exists)
-
-:::
-
-### Floor Exists
-
-Throughout this section, I will be using an example where I am mapping NSH 3 when NSH 4 has already been mapped.
-
-1. Open JOSM
-2. Press `Ctrl + O` or go to `File > Open` and open the `cmu.osm` file in the root of the map data repo.
-3. Also open the `.osm` file for the 
-
-### No Floor Exists
+### Starting Mapping
 
 1. Open JOSM
 2. Press `Ctrl + O` or go to `File > Open` and open the `cmu.osm` file in the root of the map data repo.
 3. Click on `Imagery > New picture layer from file...`
    - This option may be under `Imagery > More...`
-4. Open the `.png` file you just converted.
-5. 
+4. Open the `.png` floor plan file set up in the previous section.
+5. Press `Ctrl + N` or click `File > New Layer`. Save the new layer as `BUILDING-FLOOR#.osm`
+   - For example, `GHC-5.osm`
+6. Make sure the new layer is activated. If not, click where the green checkmark should be to activate it. ![Activate layer](images/03-mapping/activate-layer.png)
+7. Insert a new level using the Indoor Mapping Helper
+   - Make sure the panel is open (click this icon ![IndoorHelper](images/03-mapping/indoorhelper.png) on the left if it's not )
+   - Click on the `Insert level` button
+
+![Insert level](images/03-mapping/insert-level.png)
+
+8. Enter in the floor number. You are now in drawing mode.
+9. Map a simple room or corridor, then press `SPACE`. This will add a new level.
+10. Make sure the new level is selected in the top-left ![Level select](images/03-mapping/level-select.png) and `Working level` shows the correct level.
+
+![Working level](images/03-mapping/working-level.png)
+
+11. Under `Object`, select the correct option for what you mapped. Here are a few common ones:
+
+| Object | Description |
+| :-: | :- |
+| `ROOM` | Any office, classroom, or lecture hall. Typically surrounded by walls with doors for access |
+| `CORRIDOR` | Hallways & other indoor pathways |
+| `AREA` | Large indoor areas |
+| `STEPS` | Use this for stairs |
+| `DOOR_PRIVATE` | Typically classroom and office doors, anything that requires an ID |
+
+12. Naming conventions
+
+| Tag | Format |
+| :-: | :- |
+| `Name` | `BUILDING ROOM#` (e.g. GHC 5207) | 
+| `Reference` | `ROOM#` (e.g. 5207) |
+
+:::note
+
+For corridors and areas, they are usually marked on the floor plans with some number, just use that in place of `ROOM#`
+
+:::
+
+13. Typically map corridors first. Break them up by number (e.g. WEH 5100 separate from WEH 5200). Then map rooms and areas, then doors.
+14. When mapping new rooms/corridors, if there are overlaps between potential nodes, make sure to use the same node (e.g. adjacent rooms share 2 nodes as corners). Start new nodes on preexisting ways if what you are mapping share common walls/boundaries.
+
+![Example](images/03-mapping/example-weh-5.png)
+
+15. Try to keep angles at 90 degrees by using the angle snap tool (press `A` when drawing to toggle) and the orthogonalize tool (press `Q` after selecting ways)
+
+:::tip
+
+Open any one of the existing `.osm` for examples on how your maps should look like.
+
+:::
+
+## Useful Resources
+
+- [Simple Indoor Tagging](https://wiki.openstreetmap.org/wiki/Simple_Indoor_Tagging)
+- [Pedestrian navigation - Ways](https://wiki.openstreetmap.org/wiki/Guidelines_for_pedestrian_navigation#Ways_inside_buildings)
+- [Pedestrian navigation - Areas](https://wiki.openstreetmap.org/wiki/Guidelines_for_pedestrian_navigation#Inside_buildings)
+- [IndoorHelper](https://wiki.openstreetmap.org/wiki/JOSM/Plugins/indoorhelper)
+- [PicLayer](https://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer)
