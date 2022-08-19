@@ -31,7 +31,7 @@ Throughout this section, I will be using an example where I am mapping NSH 3 whe
 
 1. Open JOSM
 2. Press `Ctrl + O` or go to `File > Open` and open the `cmu.osm` file in the root of the map data repo.
-3. Also open the `.osm` file for the 
+3. Also open the `.osm` file for the
 
 ### No Floor Exists
 
@@ -40,4 +40,4 @@ Throughout this section, I will be using an example where I am mapping NSH 3 whe
 3. Click on `Imagery > New picture layer from file...`
    - This option may be under `Imagery > More...`
 4. Open the `.png` file you just converted.
-5. 
+5.

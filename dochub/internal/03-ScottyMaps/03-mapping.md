@@ -7,6 +7,7 @@ title: Mapping
 ## Basics
 
 Please read the following sections from this [guide](https://labs.mapbox.com/mapping/mapping-with-josm/#creating-data):
+
 - Creating data
 - Modifying data
 - Tagging
@@ -19,18 +20,19 @@ For our purposes, we are almost always going to use closed ways.
 
 [Keyboard shortcuts](https://josm.openstreetmap.de/wiki/Shortcuts) are going to speed up your mapping significantly. Here are some you should know:
 
-| Shortcut | Action |
-| :-: | :- |
-| `A` | Standard draw mode, press again for angle snapping |
-| `S` | Select tool |
-| `Q` | Orthogonalize angles |
+| Shortcut | Action                                             |
+| :------: | :------------------------------------------------- |
+|   `A`    | Standard draw mode, press again for angle snapping |
+|   `S`    | Select tool                                        |
+|   `Q`    | Orthogonalize angles                               |
 
 ## Indoor Mapping Guidelines
 
 Make sure you've cloned the map data [repo](./getting-started#map-data) to your local machine.
 
 Create a new branch called `andrew_id/building-floor`
-   - For example, if I were mapping Gates 5, my branch would be `jlyao/ghc-5`
+
+- For example, if I were mapping Gates 5, my branch would be `jlyao/ghc-5`
 
 :::note
 
@@ -40,7 +42,7 @@ We are using building abbreviations for everything, you can find a list [here](h
 
 ### Set up floor plan
 
-If you are starting a new floor, please ask Preethi or Jason to set up the floor plan file. If you wish to do it yourself, see the floor plans [page](./floor-plans) (***CURRENTLY INCOMPLETE***).
+If you are starting a new floor, please ask Preethi or Jason to set up the floor plan file. If you wish to do it yourself, see the floor plans [page](./floor-plans) (**_CURRENTLY INCOMPLETE_**).
 
 ### Starting Mapping
 
@@ -66,20 +68,20 @@ If you are starting a new floor, please ask Preethi or Jason to set up the floor
 
 11. Under `Object`, select the correct option for what you mapped. Here are a few common ones:
 
-| Object | Description |
-| :-: | :- |
-| `ROOM` | Any office, classroom, or lecture hall. Typically surrounded by walls with doors for access |
-| `CORRIDOR` | Hallways & other indoor pathways |
-| `AREA` | Large indoor areas |
-| `STEPS` | Use this for stairs |
-| `DOOR_PRIVATE` | Typically classroom and office doors, anything that requires an ID |
+|     Object     | Description                                                                                 |
+| :------------: | :------------------------------------------------------------------------------------------ |
+|     `ROOM`     | Any office, classroom, or lecture hall. Typically surrounded by walls with doors for access |
+|   `CORRIDOR`   | Hallways & other indoor pathways                                                            |
+|     `AREA`     | Large indoor areas                                                                          |
+|    `STEPS`     | Use this for stairs                                                                         |
+| `DOOR_PRIVATE` | Typically classroom and office doors, anything that requires an ID                          |
 
 12. Naming conventions
 
-| Tag | Format |
-| :-: | :- |
-| `Name` | `BUILDING ROOM#` (e.g. GHC 5207) | 
-| `Reference` | `ROOM#` (e.g. 5207) |
+|     Tag     | Format                           |
+| :---------: | :------------------------------- |
+|   `Name`    | `BUILDING ROOM#` (e.g. GHC 5207) |
+| `Reference` | `ROOM#` (e.g. 5207)              |
 
 :::note
 
