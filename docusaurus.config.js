@@ -9,7 +9,7 @@ const config = {
   title: "ScottyLabs Tech",
   tagline:
     "Applications and projects built by ScottyLabs for the CMU community",
-  url: "https://tech.scottylabs.org",
+  url: "https://wiki.scottylabs.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
