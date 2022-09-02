@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "ScottyLabs Tech",
+  title: "ScottyLabs Wiki",
   tagline:
-    "Applications and projects built by ScottyLabs for the CMU community",
+    "Documentation for applications and projects built by ScottyLabs for the CMU community",
   url: "https://wiki.scottylabs.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -161,10 +161,10 @@ const config = {
           {
             title: "More",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
+              // {
+              //   label: "Blog",
+              //   to: "/blog",
+              // },
               {
                 label: "GitHub",
                 href: "https://github.com/scottylabs",
