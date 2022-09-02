@@ -169,6 +169,10 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/scottylabs",
               },
+              {
+                label: "Internal Wiki",
+                to: "dochub/internal/intro"
+              }
             ],
           },
         ],
