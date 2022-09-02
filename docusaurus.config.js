@@ -95,9 +95,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "ScottyLabs Tech",
+        title: "ScottyLabs Wiki",
         logo: {
-          alt: "ScottyLabs Tech",
+          alt: "ScottyLabs Wiki",
           src: "img/scotty.svg",
         },
         items: [
