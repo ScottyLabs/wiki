@@ -65,20 +65,6 @@ const config = {
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
       ({
-        id: "course",
-        path: "course",
-        routeBasePath: "course",
-        remarkPlugins: [],
-        editCurrentVersion: true,
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        // sidebarPath: require.resolve('./sidebars.js'),
-      }),
-    ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
         id: "hub-internal",
         path: "dochub/internal",
         routeBasePath: "dochub/internal",
@@ -112,16 +98,12 @@ const config = {
             position: "left",
             items: [
               {
-                type: "doc",
+                to: "/course",
                 label: "Course API",
-                docId: "intro",
-                docsPluginId: "course",
               },
               {
-                type: "doc",
+                to: "/dining",
                 label: "Dining API",
-                docId: "intro",
-                docsPluginId: "dining",
               },
             ],
           },
@@ -171,8 +153,8 @@ const config = {
               },
               {
                 label: "Internal Wiki",
-                to: "dochub/internal/intro"
-              }
+                to: "dochub/internal/intro",
+              },
             ],
           },
         ],
