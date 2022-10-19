@@ -44,6 +44,30 @@ const config = {
         },
       }),
     ],
+    [
+      "redocusaurus",
+      {
+        // Plugin Options for loading OpenAPI files
+        specs: [
+          {
+            spec: "https://raw.githubusercontent.com/ScottyLabs/course-api-v2/master/swagger.json",
+            route: "/course/",
+          },
+          {
+            spec: "https://raw.githubusercontent.com/ScottyLabs/dining-api/master/swagger.json",
+            route: "/dining/",
+          },
+        ],
+        // Theme Options for modifying how redoc renders them
+        theme: {
+          // Change with your site colors
+          primaryColor: "#1890ff",
+          options: {
+            disableSearch: true,
+          },
+        },
+      },
+    ],
   ],
 
   plugins: [
