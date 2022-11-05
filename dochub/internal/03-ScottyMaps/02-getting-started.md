@@ -13,7 +13,7 @@ We are using [JOSM](https://josm.openstreetmap.de/) with several plugins for ind
 
 ## Configuration
 
-1. Press `F12` or go to `Edit > Preferences`.
+1. Press `F12` or go to `Edit > Preferences` (`Cmd + ,` or `Boot > Preferences...` on macOS).
 2. Click on `Plugins` then `Download list`.
 3. Search for and click the checkmark next the following plugins:
    - `indoorhelper`
