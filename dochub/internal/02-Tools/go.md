@@ -11,7 +11,7 @@ ScottyLabs Go is our internal URL bookmarking tool. Club members should be able 
 1. Make sure you have access to this [Google Sheet](https://go.scottylabs.org/routes).
 
 :::tip
-If you don't have access, request access from the [Tech Help Desk](https://mm.scottylabs.org/scottylabs/channels/tech-help-desk) channel in Mattermost.
+If you don't have access, request access from the #tech-help-desk channel in Slack.
 :::
 
 2. Add a new row at the bottom of the sheet and fill in the necessary info. The path must have the slash (`/`) symbol before it.

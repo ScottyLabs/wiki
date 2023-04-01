@@ -17,13 +17,13 @@ client, so the address is only a forwarding address to your Andrew email.
 
 5. Fill out the following fields as follows:
 
-| Field       | Value                                        |
-| ----------- | -------------------------------------------- |
-| SMTP Server | smtp.mailgun.org                             |
-| Port        | 587                                          |
-| Username    | postmaster@scottylabs.org                    |
-| Password    | _Request from ~tech-help-desk on Mattermost_ |
-| TLS/SSL     | TLS                                          |
+| Field       | Value                                   |
+| ----------- | --------------------------------------- |
+| SMTP Server | smtp.mailgun.org                        |
+| Port        | 587                                     |
+| Username    | postmaster@scottylabs.org               |
+| Password    | _Request from ~tech-help-desk on Slack_ |
+| TLS/SSL     | TLS                                     |
 
 6. You will receive an email from CMU/Gmail asking you to verify the address. Click the verification link
    to complete the process.
