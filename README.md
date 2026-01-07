@@ -1,4 +1,4 @@
 # ScottyLabs Wiki
 
-This is the 2025-26 ScottyLabs Wiki attempt.
-Please see the [wiki](https://github.com/ScottyLabs/wiki/wiki) for the latest information.
+This repository hosts the [ScottyLabs Wiki](https://github.com/ScottyLabs/wiki/wiki), 
+a central hub for ScottyLabs documentations.
